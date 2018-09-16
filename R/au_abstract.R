@@ -11,6 +11,7 @@ au_abstract <- function() {
   avail <- file.exists(fpath)
   if(!avail) {
     file.create(fpath)
+    writeLines("<div>Add abstract</div>", fpath)
     write(fpath, "layout.md", append=TRUE)
   }
   utils::file.edit(fpath)
