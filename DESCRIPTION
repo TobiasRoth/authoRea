@@ -1,0 +1,10 @@
+Package: authoRea
+Title: Working wit R, GitHub and Authorea for collaborative writing an manuscript
+Version: 0.1
+Authors@R: person("Tobias", "Roth", email = "t.roth@unibas.ch", role = c("aut", "cre"))
+Description: R Package to write scientific Manuscript with R (for the analyses and production ready figures and tables), GitHub (for version control) and AUTHOREA for collaborating writing with coauthors not used to R and GitHub.
+Depends: R (>= 3.5.0)
+License: CCO
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
