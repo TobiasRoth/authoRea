@@ -11,7 +11,7 @@
 #' 
 au_add_figure <- function(name){
   tfig_vonfig <- fig_config
-  name_ <- unlist(str_split(name, "[.]"))[1]
+  name_ <- unlist(stringr::str_split(name, "[.]"))[1]
   fpath_ <- file.path(getOption("authoRea.imgdir"), name_)
   fpath <- file.path(getOption("authoRea.imgdir"), name_, name)
   url <- file.path("users", 244977, "articles", 324013 ,"master", "file", fpath)
@@ -29,7 +29,7 @@ au_add_figure <- function(name){
                file.path(fpath_, "caption.html"))
     
     # Add config
-    write_lines(fig_config, file.path(fpath_, "config.yml"))
+    writeLines(fig_config, file.path(fpath_, "config.yml"))
     
   }
   
@@ -40,9 +40,9 @@ au_add_figure <- function(name){
   tfig_config <- readLines(file.path(fpath_, "config.yml"))
   tfig_config[11] <- paste0("  - path: ", fpath)
   tfig_config[19] <- paste0("    url: \"/", url, "\"")
-  write_lines(tfig_config, file.path(fpath_, "config.yml"))
+  writeLines(tfig_config, file.path(fpath_, "config.yml"))
   
   # Open file with caption to edit
-  file.edit(file.path(fpath_, "caption.html"))
+  utils::file.edit(file.path(fpath_, "caption.html"))
 }
 

@@ -13,5 +13,5 @@ au_abstract <- function() {
     file.create(fpath)
     write(fpath, "layout.md", append=TRUE)
   }
-  file.edit(fpath)
+  utils::file.edit(fpath)
 }

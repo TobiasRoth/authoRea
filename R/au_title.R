@@ -9,5 +9,5 @@
 au_title <- function() {
   avail <- file.exists("title.html")
   if(!avail) stop("There should be a title.html file at the top level of repository.")
-  if(avail) file.edit("title.html")
+  if(avail) utils::file.edit("title.html")
 }

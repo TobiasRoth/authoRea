@@ -11,6 +11,6 @@ au_add_textblock <- function(name) {
   if(file.exists(fpath)) stop("A textblock with this name already exists.")
   write(fpath, "layout.md", append=TRUE)
   file.create(fpath)
-  file.edit(fpath)
+  utils::file.edit(fpath)
 }
 

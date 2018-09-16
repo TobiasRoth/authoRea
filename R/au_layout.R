@@ -9,5 +9,5 @@
 au_layout <- function() {
   avail <- file.exists("layout.md")
   if(!avail) stop("There should be a layout.md file at the top level of the repository.")
-  if(avail) file.edit("layout.md")
+  if(avail) utils::file.edit("layout.md")
 }
