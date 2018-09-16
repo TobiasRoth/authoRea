@@ -44,5 +44,8 @@ au_add_figure <- function(name){
   
   # Open file with caption to edit
   utils::file.edit(file.path(fpath_, "caption.html"))
+  
+  # Remove original figure
+  file.remove(name)
 }
 
